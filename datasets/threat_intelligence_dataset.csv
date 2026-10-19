@@ -1,0 +1,67 @@
+text,label,source
+"Spearphishing email received claiming employee account password expired. User prompted to verify credentials at spoofed domain http://login-portal.example.org.",Phishing,Synthetic
+"Urgent invoice payment request received via email with attached password-protected ZIP archive containing malicious VBA macro dropper.",Phishing,Synthetic
+"Targeted phishing lure impersonating executive management requesting urgent wire transfer authorization and confidential employee tax documentation.",Phishing,Synthetic
+"Spoofed human resources notification asking recipients to click an external verification link to view upcoming benefit compensation revisions.",Phishing,Synthetic
+"Credential harvesting landing page discovered hosting fake Microsoft 365 sign-in form collecting username and plaintext password submissions.",Phishing,Synthetic
+"Email message containing suspicious link pointing to hxxps://secure-banking-alert.example.net prompting immediate card number verification.",Phishing,Synthetic
+"Backdoor trojan executable discovered in temporary folder establishing persistent HTTP beaconing to command and control IP 198.51.100.22.",Malware,Synthetic
+"Remote access trojan AsyncRAT observed executing process hollowing into legitimate Windows svchost.exe process and logging keystrokes.",Malware,Synthetic
+"Malicious downloader dropped secondary payload onto infected workstation and modified registry Run keys for automatic persistence upon reboot.",Malware,Synthetic
+"RedLine stealer variant identified harvesting saved browser passwords and cryptocurrency wallet credentials before transmission to external server.",Malware,Synthetic
+"Cobalt Strike beacon DLL injected into explorer.exe process initiating encrypted TLS communications on TCP port 8443 to external listener.",Malware,Synthetic
+"Trojanized PDF viewer software bundled with hidden dropper establishing outbound connection to malicious IP 203.0.113.88.",Malware,Synthetic
+"LockBit ransomware deployed across corporate network encrypting SQL databases and deleting volume shadow copies via vssadmin commands.",Ransomware,Synthetic
+"Systems across manufacturing plant halted due to widespread file encryption. Ransom note dropped demanding payment in cryptocurrency.",Ransomware,Synthetic
+"BlackCat ransomware operator published exfiltrated proprietary corporate archives onto Tor leak site following refusal to pay ransom.",Ransomware,Synthetic
+"Ransomware binary appended .locked extension to all user documents and terminated database services to prevent file lock contention.",Ransomware,Synthetic
+"Adversaries executed double extortion attack demanding 5 million dollars after encrypting VM hypervisors and copying sensitive data.",Ransomware,Synthetic
+"Ransomware deployment script launched across all Active Directory joined domain endpoints following compromise of domain admin account.",Ransomware,Synthetic
+"Mimikatz utility executed on compromised server to extract cleartext passwords and NTLM hashes from LSASS process memory.",Credential Theft,Synthetic
+"Adversaries performed password spraying attack targeting remote VPN portal using common seasonal passwords against hundreds of user accounts.",Credential Theft,Synthetic
+"Kerberoasting attack detected querying Active Directory service principal names to extract service tickets for offline brute-force cracking.",Credential Theft,Synthetic
+"Keylogger installed on accounting workstation recording keystrokes and periodically transmitting credential caches to remote FTP server.",Credential Theft,Synthetic
+"Automated credential stuffing activity observed on customer login endpoint testing stolen credential databases from third-party breaches.",Credential Theft,Synthetic
+"Dumping of ntds.dit database detected via Volume Shadow Copy service to harvest domain user hashes for offline analysis.",Credential Theft,Synthetic
+"Distributed denial of service attack saturating perimeter edge routers with high-volume UDP amplification flooding exceeding 150 Gbps.",Denial of Service,Synthetic
+"SYN flood attack targeting public ecommerce web cluster causing kernel connection table exhaustion and severe service degradation.",Denial of Service,Synthetic
+"Volumetric DNS reflection attack directed against enterprise authoritative name servers resulting in widespread resolution failures.",Denial of Service,Synthetic
+"HTTP GET request flooding attack directed at resource-intensive search endpoint causing database CPU utilization to spike to 100%.",Denial of Service,Synthetic
+"Botnet traffic flood generating millions of illegitimate requests against customer portal rendering authentication services unavailable.",Denial of Service,Synthetic
+"Application-layer denial of service attack exploiting slowloris connection holding against internal API gateway endpoints.",Denial of Service,Synthetic
+"SQL injection vulnerability exploited on customer lookup page allowing adversary to dump database schema and sensitive customer tables.",Web Application Attack,Synthetic
+"Cross-site scripting payload injected into user profile fields executing unauthorized JavaScript actions in administrative browser sessions.",Web Application Attack,Synthetic
+"Server-Side Request Forgery flaw exploited in document conversion service allowing access to internal AWS EC2 metadata credentials.",Web Application Attack,Synthetic
+"Path traversal vulnerability abused on file download servlet allowing remote download of sensitive /etc/passwd and configuration files.",Web Application Attack,Synthetic
+"Web shell backdoor uploaded to web server uploads folder granting attacker interactive command execution under web application identity.",Web Application Attack,Synthetic
+"Command injection vulnerability identified in web administrative interface allowing execution of arbitrary bash commands via ping diagnostic tool.",Web Application Attack,Synthetic
+"Unauthenticated remote code execution vulnerability in Apache Log4j (CVE-2021-44228) actively exploited via malicious JNDI lookup strings.",Vulnerability Exploitation,Synthetic
+"Threat actors observed exploiting zero-day vulnerability in perimeter VPN appliance prior to vendor security patch availability.",Vulnerability Exploitation,Synthetic
+"Exploitation of remote buffer overflow vulnerability in legacy service resulting in arbitrary code execution and reverse shell creation.",Vulnerability Exploitation,Synthetic
+"Adversaries leveraged known privilege escalation vulnerability in Linux kernel to transition from unprivileged user to root.",Vulnerability Exploitation,Synthetic
+"Security advisory warns of critical vulnerability in web server software allowing remote unauthenticated attackers to execute arbitrary code.",Vulnerability Exploitation,Synthetic
+"Proof-of-concept exploit published for recently disclosed CVE in enterprise file sharing software with active exploitation observed.",Vulnerability Exploitation,Synthetic
+"Adversary staged 50 gigabytes of intellectual property archives into multi-part RAR files and exfiltrated them to cloud Mega storage.",Data Exfiltration,Synthetic
+"Unauthorized data transfer observed transferring customer database dumps over encrypted rclone channel to external cloud bucket.",Data Exfiltration,Synthetic
+"Exfiltration of sensitive research documents detected utilizing DNS tunneling protocol to bypass restrictive perimeter firewall rules.",Data Exfiltration,Synthetic
+"Large volume outbound SFTP connection initiated from financial database server transferring encrypted archives to unfamiliar foreign IP.",Data Exfiltration,Synthetic
+"Confidential corporate acquisition strategy documents leaked on hacker forum following covert exfiltration over compromised C2 tunnel.",Data Exfiltration,Synthetic
+"Stolen customer records and financial statements archived into staging directory and uploaded to attacker-controlled web server.",Data Exfiltration,Synthetic
+"Automated port scanning and network service discovery activity detected originating from external IP scanning TCP ports 21, 22, 80, and 445.",Reconnaissance,Synthetic
+"Subdomain enumeration and DNS brute-force queries observed targeting corporate domain infrastructure from multiple cloud hosting IPs.",Reconnaissance,Synthetic
+"Nmap network discovery scan identified probing perimeter firewalls for open management interfaces and remote access services.",Reconnaissance,Synthetic
+"Adversaries observed querying Shodan and performing automated directory fuzzing against newly deployed customer application endpoints.",Reconnaissance,Synthetic
+"External threat actor scanning internet-facing IP ranges looking for exposed Remote Desktop Protocol (RDP) listening ports.",Reconnaissance,Synthetic
+"Network vulnerability scanner identified performing unauthorized banner grabbing and version detection across external subnets.",Reconnaissance,Synthetic
+"Routine scheduled maintenance and operating system security patch installation conducted successfully across web server pool.",Benign or Informational,Synthetic
+"Authorized third-party penetration testing engagement conducted according to agreed rules of engagement. Findings remediated.",Benign or Informational,Synthetic
+"Security awareness training simulation completed. No malicious activity or external indicators identified during scheduled exercise.",Benign or Informational,Synthetic
+"Internal vulnerability scanner audit report detailing standard hygiene metrics and recommending software updates for test lab systems.",Benign or Informational,Synthetic
+"Informational advisory regarding upcoming multi-factor authentication policy enforcement for all standard corporate user accounts.",Benign or Informational,Synthetic
+"Firewall configuration update applied during scheduled change window with zero security anomalies or unexpected traffic patterns.",Benign or Informational,Synthetic
+"General operational inquiry regarding quarterly IT asset disposal procedures and hardware lifecycle documentation standards.",Other or Unknown,Synthetic
+"Internal memorandum discussing office workspace ergonomic equipment upgrades and upcoming holiday cafeteria schedule changes.",Other or Unknown,Synthetic
+"Software development team retrospective meeting notes regarding sprint velocity improvements and ticket estimation accuracy.",Other or Unknown,Synthetic
+"Customer inquiry regarding billing payment receipt and request for updated invoice copy with corrected company mailing address.",Other or Unknown,Synthetic
+"Unrelated text discussing weather patterns and general news articles without any cybersecurity indicators or technical details.",Other or Unknown,Synthetic
+"General network infrastructure documentation describing rack layout, cable numbering conventions, and datacenter air conditioning settings.",Other or Unknown,Synthetic

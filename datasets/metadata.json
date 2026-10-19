@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-10-13T16:13:05.322496+00:00",
+  "datasets": [
+    {
+      "name": "Enron Spam & Ham Corpus (Cleaned)",
+      "filename": "enron_spam_cleaned.csv",
+      "source": "https://raw.githubusercontent.com/MWiechmann/enron_spam_data/master/enron_spam_data.zip",
+      "license": "Public Domain / Research Use",
+      "total_samples": 6000,
+      "classes": [
+        "Safe",
+        "Suspicious"
+      ],
+      "task": "Model A: Binary Suspicious vs Safe Document Classification"
+    },
+    {
+      "name": "CISA Known Exploited Vulnerabilities Catalog",
+      "filename": "cisa_kev.json",
+      "source": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "license": "U.S. Public Domain (CISA)",
+      "total_vulnerabilities": 1740,
+      "task": "Threat Intelligence Feed & Indicator Enrichment"
+    },
+    {
+      "name": "ThreatLens Multi-Class Cyber Threat Intelligence Dataset",
+      "filename": "threat_intelligence_dataset.csv",
+      "source": "Sanitized CTI Advisories, MITRE ATT&CK Narratives & RFC 5737 Scenarios",
+      "license": "MIT License",
+      "total_samples": 66,
+      "classes": [
+        "Phishing",
+        "Malware",
+        "Ransomware",
+        "Credential Theft",
+        "Denial of Service",
+        "Web Application Attack",
+        "Vulnerability Exploitation",
+        "Data Exfiltration",
+        "Reconnaissance",
+        "Benign or Informational",
+        "Other or Unknown"
+      ],
+      "task": "Model B: Fine-Grained Threat Category Classification"
+    }
+  ]
+}

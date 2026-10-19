@@ -1,0 +1,8 @@
+CostCenter,ExpenseCategory,VendorName,BudgetedAmountUSD,ActualAmountUSD,VarianceUSD,ApprovalStatus,FiscalQuarter
+CC-101,Cloud Infrastructure Hosting,Amazon Web Services Inc,145000.00,141200.50,-3799.50,Approved,2026-Q3
+CC-101,Security Endpoint Protection,CrowdStrike Holdings,38000.00,38000.00,0.00,Approved,2026-Q3
+CC-102,Developer Productivity Tooling,Atlassian Inc (Jira/Confluence),22500.00,22500.00,0.00,Approved,2026-Q3
+CC-102,Code Collaboration Platform,GitHub Enterprise Services,18000.00,18000.00,0.00,Approved,2026-Q3
+CC-103,Corporate Identity & SSO,Okta Identity Cloud,28000.00,27500.00,-500.00,Approved,2026-Q3
+CC-104,Enterprise Communication,Slack Technologies / Salesforce,16500.00,16500.00,0.00,Approved,2026-Q3
+CC-105,External Compliance Audit,Deloitte & Touche LLP,65000.00,65000.00,0.00,Approved,2026-Q3

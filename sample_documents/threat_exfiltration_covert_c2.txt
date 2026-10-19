@@ -1,0 +1,38 @@
+INCIDENT RESPONSE FORENSIC REPORT — DATA EXFILTRATION DETECTED
+=============================================================================
+Case Identifier: IR-EXFIL-2026-9041
+Classification: HIGH SEVERITY
+Incident Lead: Senior Security Operations Analyst
+
+1. INCIDENT SYNOPSIS
+Between 01:00 UTC and 04:30 UTC on October 14, 2026, network detection monitors
+flagged anomalous, sustained high-volume egress traffic originating from the internal
+file server DFS-CORE-02 (IP: 10.200.4.55).
+
+Detailed deep-packet inspection revealed that the host was communicating with external
+adversary infrastructure using encrypted DNS tunneling and unauthorized SFTP connections.
+
+2. DETECTED ATTACK COMMUNICATIONS & TELEMETRY
+Adversary staging server IP address: 192.0.2.144
+Destination drop domain: exfil-drop-secure[.]example[.]com
+Defanged C2 Listener URL: hxxps://exfil-drop-secure[.]example[.]com/incoming/stream.php
+Total volume exfiltrated: 14.8 Gigabytes compressed archive (.7z format)
+
+3. HOST MALWARE ARTIFACTS
+Memory analysis on DFS-CORE-02 uncovered injected Cobalt Strike beacon threads within
+the spoolsv.exe process. The payload established persistent scheduled tasks under the name
+'SystemMaintenanceAudit'.
+
+Payload cryptographic hashes:
+MD5: 5d41402abc4b2a76b9719d911017c592
+SHA256: 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
+
+4. COMPROMISED CREDENTIALS
+Adversaries utilized compromised Domain Administrator account 'svc-backup-admin' to dump
+NTDS.dit database files across internal shares.
+
+5. IMMEDIATE CONTAINMENT ACTIONS REQUIRED
+- Terminate all outbound sessions destined for 192.0.2.144 and domain exfil-drop-secure[.]example[.]com.
+- Disconnect DFS-CORE-02 from the corporate LAN and initiate live memory preservation.
+- Execute global password rotation for all service accounts with Domain Admin privileges.
+- Submit hash 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08 to EDR blocklist.

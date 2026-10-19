@@ -1,0 +1,35 @@
+GLOBAL ENTERPRISE IT & HR HANDBOOK — REMOTE WORK SECURITY PROTOCOL
+=============================================================================
+Document Reference: HR-IT-GUIDE-2026
+Version: 4.1
+Last Updated: October 2026
+Governance: Corporate Security Policy & Annual Compliance Audit Guidelines
+Standard: Certified under ISO/IEC 27001 Information Security Management
+
+1. WELCOME & REMOTE WORK PHILOSOPHY
+Enterprise embraces hybrid and flexible remote work while upholding our commitment
+to data privacy, client trust, and infrastructure integrity under corporate security policy.
+This guide details standard operating expectations for home office environments.
+
+2. SECURE NETWORK ACCESS & VPN GUIDELINES
+- Always connect to the corporate Virtual Private Network (VPN) using the pre-installed
+  GlobalProtect client on your managed laptop.
+- The standard corporate portal address is: https://vpn.internal.lan
+- Your connection requires hardware FIDO2 key or approved authenticator push approval.
+- Compliance audit standards mandate avoiding public Wi-Fi without active encryption.
+
+3. WORKSTATION HARDENING & DEVICE HEALTH
+- Corporate laptops are enrolled in automated patch management. Please allow scheduled
+  operating system updates to complete during your maintenance window.
+- Do not install unauthorized browser extensions or third-party file sharing tools.
+- Lock your screen (Windows Key + L) whenever stepping away from your workspace.
+
+4. IT HELP DESK SUPPORT & ASSISTANCE
+If you experience hardware failures, display adapter issues, or password reset needs,
+reach out to our friendly technical support team:
+- Portal: https://helpdesk.internal.lan
+- Email: it-support@internal.lan
+- Internal Hotline: Ext. 4357 (HELP)
+- Normal Support Hours: 24/7 Global Follow-the-Sun Coverage
+
+Thank you for your daily dedication to keeping our company secure!

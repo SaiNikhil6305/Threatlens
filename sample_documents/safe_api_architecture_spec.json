@@ -1,0 +1,67 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Enterprise Inventory Management REST API",
+    "version": "2.4.0",
+    "description": "Internal microservice API providing inventory query and stock reservation capabilities under corporate security policy and compliance audit approval.",
+    "compliance": "ISO/IEC 27001 certified architecture standard",
+    "contact": {
+      "name": "Supply Chain Engineering Guild",
+      "email": "inventory-guild@internal.lan",
+      "url": "https://developer.internal.lan"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://inventory-api.internal.lan/v2",
+      "description": "Production Internal Cluster"
+    },
+    {
+      "url": "https://staging-inventory.internal.lan/v2",
+      "description": "Staging Sandbox"
+    }
+  ],
+  "paths": {
+    "/items": {
+      "get": {
+        "summary": "List available warehouse stock items",
+        "operationId": "listInventoryItems",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by item category"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 50
+            },
+            "description": "Number of records"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of stock records"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Service readiness and liveness probe",
+        "operationId": "checkServiceHealth",
+        "responses": {
+          "200": {
+            "description": "Service is healthy and connected to PostgreSQL database."
+          }
+        }
+      }
+    }
+  }
+}

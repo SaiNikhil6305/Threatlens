@@ -1,0 +1,206 @@
+{
+  "generated_at": "2026-10-16T16:45:00Z",
+  "description": "ThreatLens Comprehensive PDF Verification & Testing Suite (20 Scenario PDFs)",
+  "documents": [
+    {
+      "filename": "safe_company_policy.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Benign",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Corporate information security policy outlining employee responsibilities, password management, and incident response.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_project_report.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Benign",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Software engineering architecture report detailing microservices, database schemas, and performance benchmarks.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_security_awareness.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Educational",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Educational training material explaining phishing indicators and safe browsing without being classified as malicious.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_financial_report.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Benign",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Audited corporate financial statement with revenue metrics, operational expenditures, and auditor notes.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_incident_response_playbook.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Operational Runbook",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "NIST SP 800-61 Rev 2 standard operational procedure detailing incident handling, severity SLAs, and forensic chain of custody.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_cloud_infrastructure_guide.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Architecture Spec",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Cloud hosting architectural blueprint detailing multi-region Kubernetes deployments, Terraform IaC, and Zero Trust design.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_devops_release_changelog.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Release Manifest",
+      "pages": 2,
+      "file_type": "PDF",
+      "description": "Production release manifest v3.2.1-stable with unit test pass rates, dependency upgrades, and telemetry endpoints.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_quarterly_budget_report.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Financial Ledger",
+      "pages": 2,
+      "file_type": "PDF",
+      "description": "Corporate IT infrastructure ledger tracking approved SaaS subscriptions, vendor allocations, and compute budget variance.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_remote_work_security_handbook.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Policy Guide",
+      "pages": 2,
+      "file_type": "PDF",
+      "description": "Employee remote work guide detailing corporate VPN connections, hardware security keys, and patch policies.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "safe_api_architecture_spec.pdf",
+      "category": "Safe Documents",
+      "intended_classification": "Safe / Technical Spec",
+      "pages": 2,
+      "file_type": "PDF",
+      "description": "OpenAPI 3.0 specification for internal inventory REST microservices with contract schemas and health checks.",
+      "expected_severity": "No significant indicators detected",
+      "expected_indicators": 0
+    },
+    {
+      "filename": "threat_phishing_email.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Phishing",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Deceptive executive email lure directing victims to a credential harvesting landing page.",
+      "expected_severity": "High",
+      "expected_indicators": 4
+    },
+    {
+      "filename": "threat_credential_theft.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Credential Theft",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Sophisticated phishing document designed to harvest Active Directory credentials and MFA tokens.",
+      "expected_severity": "High",
+      "expected_indicators": 4
+    },
+    {
+      "filename": "threat_suspicious_download.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Malware",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Threat report documenting a deceptive zero-day patch advisory delivering a trojan executable.",
+      "expected_severity": "High",
+      "expected_indicators": 3
+    },
+    {
+      "filename": "threat_social_engineering.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Social Engineering / BEC",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Business Email Compromise (BEC) scenario coercing finance staff into an unauthorized wire transfer.",
+      "expected_severity": "High",
+      "expected_indicators": 3
+    },
+    {
+      "filename": "threat_ransomware_incident.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Ransomware",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Comprehensive intrusion advisory detailing LockBit 3.0 encryption, vssadmin deletion, and ransom demands.",
+      "expected_severity": "Critical",
+      "expected_indicators": 5
+    },
+    {
+      "filename": "threat_apt_spearphishing.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "APT / Espionage",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Targeted APT29 spearphishing campaign utilizing ISO droppers, memory-injected Mimikatz, and C2 servers.",
+      "expected_severity": "High",
+      "expected_indicators": 6
+    },
+    {
+      "filename": "threat_log4shell_cve_alert.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Vulnerability Exploitation",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Structured advisory detailing CVE-2021-44228 Log4Shell JNDI injection exploits, malicious LDAP servers, and shell droppers.",
+      "expected_severity": "Critical",
+      "expected_indicators": 5
+    },
+    {
+      "filename": "threat_exfiltration_covert_c2.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Data Exfiltration",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "Digital forensics incident report detailing unauthorized 14.8 GB data exfiltration via DNS tunneling to 192.0.2.144 and Cobalt Strike hashes.",
+      "expected_severity": "High",
+      "expected_indicators": 5
+    },
+    {
+      "filename": "threat_malicious_macro_invoice.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Malware / Dropper",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "EDR process execution log capturing malicious Office macro spawning encoded PowerShell, payload download from bad domain, and C2 IP.",
+      "expected_severity": "High",
+      "expected_indicators": 5
+    },
+    {
+      "filename": "threat_executive_wire_fraud.pdf",
+      "category": "Threat Documents",
+      "intended_classification": "Social Engineering / BEC",
+      "pages": 3,
+      "file_type": "PDF",
+      "description": "CEO impersonation Business Email Compromise (BEC) pressuring treasury director to bypass dual-approval and wire $485,000 urgently.",
+      "expected_severity": "High",
+      "expected_indicators": 3
+    }
+  ]
+}

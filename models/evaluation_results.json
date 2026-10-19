@@ -1,0 +1,239 @@
+{
+  "best_model": "Linear SVM",
+  "metadata": {
+    "model_name": "Linear SVM",
+    "version": "v2.1791908085",
+    "dataset_name": "Enron Spam & Phishing Cleaned Corpus",
+    "trained_at": "2026-10-13T16:14:45.599055+00:00",
+    "total_samples": 6000,
+    "train_samples": 4200,
+    "val_samples": 600,
+    "test_samples": 1200,
+    "classes": [
+      "Safe",
+      "Suspicious"
+    ],
+    "vocabulary_size": 15000,
+    "selected_metrics": {
+      "accuracy": 0.9875,
+      "precision_macro": 0.9875,
+      "precision_weighted": 0.9875,
+      "recall_macro": 0.9875,
+      "recall_weighted": 0.9875,
+      "f1_macro": 0.9875,
+      "f1_weighted": 0.9875,
+      "confusion_matrix": [
+        [
+          594,
+          6
+        ],
+        [
+          9,
+          591
+        ]
+      ],
+      "labels": [
+        "Safe",
+        "Suspicious"
+      ],
+      "roc_auc": 0.9994,
+      "per_class": {
+        "Safe": {
+          "precision": 0.9851,
+          "recall": 0.99,
+          "f1_score": 0.9875
+        },
+        "Suspicious": {
+          "precision": 0.9899,
+          "recall": 0.985,
+          "f1_score": 0.9875
+        }
+      },
+      "training_duration_seconds": 0.256
+    },
+    "candidate_comparison": {
+      "Logistic Regression": {
+        "accuracy": 0.9825,
+        "precision": 0.9827,
+        "recall": 0.9825,
+        "f1_score": 0.9825,
+        "roc_auc": 0.9991,
+        "training_duration": 0.099
+      },
+      "Multinomial Naive Bayes": {
+        "accuracy": 0.9908,
+        "precision": 0.9908,
+        "recall": 0.9908,
+        "f1_score": 0.9908,
+        "roc_auc": 0.9993,
+        "training_duration": 0.01
+      },
+      "Linear SVM": {
+        "accuracy": 0.9875,
+        "precision": 0.9875,
+        "recall": 0.9875,
+        "f1_score": 0.9875,
+        "roc_auc": 0.9994,
+        "training_duration": 0.256
+      },
+      "Random Forest": {
+        "accuracy": 0.96,
+        "precision": 0.9623,
+        "recall": 0.96,
+        "f1_score": 0.96,
+        "roc_auc": 0.997,
+        "training_duration": 0.374
+      }
+    }
+  },
+  "detailed_results": {
+    "Logistic Regression": {
+      "accuracy": 0.9825,
+      "precision_macro": 0.9827,
+      "precision_weighted": 0.9827,
+      "recall_macro": 0.9825,
+      "recall_weighted": 0.9825,
+      "f1_macro": 0.9825,
+      "f1_weighted": 0.9825,
+      "confusion_matrix": [
+        [
+          584,
+          16
+        ],
+        [
+          5,
+          595
+        ]
+      ],
+      "labels": [
+        "Safe",
+        "Suspicious"
+      ],
+      "roc_auc": 0.9991,
+      "per_class": {
+        "Safe": {
+          "precision": 0.9915,
+          "recall": 0.9733,
+          "f1_score": 0.9823
+        },
+        "Suspicious": {
+          "precision": 0.9738,
+          "recall": 0.9917,
+          "f1_score": 0.9827
+        }
+      },
+      "training_duration_seconds": 0.099
+    },
+    "Multinomial Naive Bayes": {
+      "accuracy": 0.9908,
+      "precision_macro": 0.9908,
+      "precision_weighted": 0.9908,
+      "recall_macro": 0.9908,
+      "recall_weighted": 0.9908,
+      "f1_macro": 0.9908,
+      "f1_weighted": 0.9908,
+      "confusion_matrix": [
+        [
+          594,
+          6
+        ],
+        [
+          5,
+          595
+        ]
+      ],
+      "labels": [
+        "Safe",
+        "Suspicious"
+      ],
+      "roc_auc": 0.9993,
+      "per_class": {
+        "Safe": {
+          "precision": 0.9917,
+          "recall": 0.99,
+          "f1_score": 0.9908
+        },
+        "Suspicious": {
+          "precision": 0.99,
+          "recall": 0.9917,
+          "f1_score": 0.9908
+        }
+      },
+      "training_duration_seconds": 0.01
+    },
+    "Linear SVM": {
+      "accuracy": 0.9875,
+      "precision_macro": 0.9875,
+      "precision_weighted": 0.9875,
+      "recall_macro": 0.9875,
+      "recall_weighted": 0.9875,
+      "f1_macro": 0.9875,
+      "f1_weighted": 0.9875,
+      "confusion_matrix": [
+        [
+          594,
+          6
+        ],
+        [
+          9,
+          591
+        ]
+      ],
+      "labels": [
+        "Safe",
+        "Suspicious"
+      ],
+      "roc_auc": 0.9994,
+      "per_class": {
+        "Safe": {
+          "precision": 0.9851,
+          "recall": 0.99,
+          "f1_score": 0.9875
+        },
+        "Suspicious": {
+          "precision": 0.9899,
+          "recall": 0.985,
+          "f1_score": 0.9875
+        }
+      },
+      "training_duration_seconds": 0.256
+    },
+    "Random Forest": {
+      "accuracy": 0.96,
+      "precision_macro": 0.9623,
+      "precision_weighted": 0.9623,
+      "recall_macro": 0.96,
+      "recall_weighted": 0.96,
+      "f1_macro": 0.96,
+      "f1_weighted": 0.96,
+      "confusion_matrix": [
+        [
+          555,
+          45
+        ],
+        [
+          3,
+          597
+        ]
+      ],
+      "labels": [
+        "Safe",
+        "Suspicious"
+      ],
+      "roc_auc": 0.997,
+      "per_class": {
+        "Safe": {
+          "precision": 0.9946,
+          "recall": 0.925,
+          "f1_score": 0.9585
+        },
+        "Suspicious": {
+          "precision": 0.9299,
+          "recall": 0.995,
+          "f1_score": 0.9614
+        }
+      },
+      "training_duration_seconds": 0.374
+    }
+  }
+}
