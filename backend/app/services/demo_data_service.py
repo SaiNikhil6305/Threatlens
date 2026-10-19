@@ -1,5 +1,7 @@
+from __future__ import annotations
 import logging
 import json
+from typing import Dict, Any, List
 from datetime import datetime, timezone, timedelta
 from sqlalchemy.orm import Session
 from app.models.entities import (
