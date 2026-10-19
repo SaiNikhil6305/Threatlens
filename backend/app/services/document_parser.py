@@ -2,8 +2,24 @@ import io
 import json
 import csv
 from typing import Dict, Any, Tuple, List
-import pymupdf
-import docx
+
+try:
+    import pymupdf
+except ImportError:
+    try:
+        import fitz as pymupdf
+    except ImportError:
+        pymupdf = None
+
+try:
+    import docx
+except ImportError:
+    docx = None
+
+try:
+    import pypdf
+except ImportError:
+    pypdf = None
 
 ALLOWED_EXTENSIONS = {".txt", ".docx", ".pdf", ".csv", ".json"}
 MAX_FILE_BYTES = 10 * 1024 * 1024  # 10 MB limit
@@ -81,23 +97,44 @@ class DocumentParser:
             pages: List[Dict[str, Any]] = []
 
             if ext == ".pdf":
-                doc = pymupdf.open(stream=content_bytes, filetype="pdf")
-                total_pages = len(doc)
-                combined_text_parts = []
+                if pymupdf is not None:
+                    doc = pymupdf.open(stream=content_bytes, filetype="pdf")
+                    total_pages = len(doc)
+                    combined_text_parts = []
 
-                for i in range(total_pages):
-                    page = doc[i]
-                    p_text = page.get_text() or ""
-                    clean_p = p_text.strip()
-                    pages.append({
-                        "page_number": i + 1,
-                        "text": clean_p,
-                        "character_count": len(clean_p)
-                    })
-                    if clean_p:
-                        combined_text_parts.append(clean_p)
+                    for i in range(total_pages):
+                        page = doc[i]
+                        p_text = page.get_text() or ""
+                        clean_p = p_text.strip()
+                        pages.append({
+                            "page_number": i + 1,
+                            "text": clean_p,
+                            "character_count": len(clean_p)
+                        })
+                        if clean_p:
+                            combined_text_parts.append(clean_p)
 
-                combined_text = "\n\n".join(combined_text_parts).strip()
+                    combined_text = "\n\n".join(combined_text_parts).strip()
+                elif pypdf is not None:
+                    reader = pypdf.PdfReader(io.BytesIO(content_bytes))
+                    total_pages = len(reader.pages)
+                    combined_text_parts = []
+
+                    for i, page in enumerate(reader.pages):
+                        p_text = page.extract_text() or ""
+                        clean_p = p_text.strip()
+                        pages.append({
+                            "page_number": i + 1,
+                            "text": clean_p,
+                            "character_count": len(clean_p)
+                        })
+                        if clean_p:
+                            combined_text_parts.append(clean_p)
+
+                    combined_text = "\n\n".join(combined_text_parts).strip()
+                else:
+                    return False, "", {"error": "No PDF parser library (pymupdf or pypdf) available."}
+
                 words = len(combined_text.split()) if combined_text else 0
 
                 # Check if scanned / image-only PDF
@@ -122,6 +159,8 @@ class DocumentParser:
                 }
 
             elif ext == ".docx":
+                if docx is None:
+                    return False, "", {"error": "python-docx library is not available."}
                 doc = docx.Document(io.BytesIO(content_bytes))
                 paragraphs = []
                 for p in doc.paragraphs:
